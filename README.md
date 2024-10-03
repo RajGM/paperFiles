@@ -97,8 +97,8 @@ Between-group variance is crucial for understanding whether different groups in 
 This document explains how misinformation propagation analysis is conducted across three different file structures:
 
 1. `newdomainX.json`
-2. `processed_results_with_new_comparisons.json`
-3. `between_group_variance_results.json`
+2. `allfilesWithinRange.json`
+3. `allSameNewsAcrossRange.json`
 
 ## 1. `newdomainX.json` Structure
 
@@ -130,7 +130,7 @@ This file is the raw input data that stores information about the nodes and thei
 
 `newdomainX.json` serves as the foundational data source, containing the raw results and nodes’ interactions. The data here are used to calculate propagation rates, misinformation indices, and other statistical insights.
 
-## 2. `processed_results_with_new_comparisons.json` Structure
+## 2. `allfilesWithinRange.json` Structure
 
 This file contains processed results from the `newdomainX.json` file. It calculates various metrics such as Misinformation Propagation Rate (MPR), Taxonomy Analysis, and ANOVA results.
 
@@ -168,7 +168,7 @@ This file contains processed results from the `newdomainX.json` file. It calcula
 
 This file structures and processes the raw data into meaningful statistical insights, analyzing how misinformation propagates between nodes and across different time steps.
 
-## 3. `between_group_variance_results.json` Structure
+## 3. `allSameNewsAcrossRange.json` Structure
 
 This file performs between-group variance analysis for **news files across multiple ranges** and **all news files globally**. It looks for patterns of misinformation propagation across different sections of the network.
 
@@ -202,7 +202,7 @@ This file helps to understand how misinformation spreads at a higher level, both
 1. **Raw Data (`newdomainX.json`)**:
    - Stores nodes, their misinformation indices, and interactions.
 
-2. **Processed Results (`processed_results_with_new_comparisons.json`)**:
+2. **Processed Results (`allfilesWithinRange.json`)**:
    - Takes the raw data from `newdomainX.json` and calculates:
      - Misinformation Propagation Rate (MPR)
      - Taxonomy Analysis
@@ -210,15 +210,15 @@ This file helps to understand how misinformation spreads at a higher level, both
      - Dynamic Misinformation Index (DMI) Series
    - It provides detailed insights for each range and node comparison.
 
-3. **Between Group Variance Results (`between_group_variance_results.json`)**:
+3. **Between Group Variance Results (`allSameNewsAcrossRange.json`)**:
    - Compares the same news across multiple ranges to find patterns in how misinformation propagates.
    - Provides a global view by comparing all news files and ranges across the network, identifying larger trends in the network’s misinformation dynamics.
 
 ### Key Relationships:
 
-- The **DMISeries** in `processed_results_with_new_comparisons.json` forms the basis for **ANOVA analysis** both within the range (in the same file) and across multiple ranges (in `between_group_variance_results.json`).
+- The **DMISeries** in `allfilesWithinRange.json` forms the basis for **ANOVA analysis** both within the range (in the same file) and across multiple ranges (in `allSameNewsAcrossRange.json`).
 - The **Misinformation Indices (I0, I1, I2)** from `newdomainX.json` are used to calculate the **Misinformation Propagation Rate (MPR)** and perform the **Taxonomy Analysis**.
-- **allNewsAnovaResults** in `processed_results_with_new_comparisons.json` compares all news files within a range, while **Between Range ANOVA** in `between_group_variance_results.json` compares the same news across different ranges.
+- **allNewsAnovaResults** in `allfilesWithinRange.json` compares all news files within a range, while **Between Range ANOVA** in `allSameNewsAcrossRange.json` compares the same news across different ranges.
 
 
 # File Structure Schemas
@@ -416,7 +416,7 @@ This file contains the processed data that compares all news files within a rang
 }
 ```
 
-## 3. `between_group_variance_results.json` Structure
+## 3. `allSameNewsAcrossRange.json` Structure
 
 This file contains the processed data that compares the same news across different ranges.
 
