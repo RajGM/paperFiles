@@ -306,8 +306,8 @@ function performBetweenGroupVarianceAnalysis(results) {
 
 // Main execution function
 function main() {
-  const directoryPath = './same_agents/json/'; // Directory with all input JSON files
-  const outputFilePath = './same_agents/analysis/allfilesWithinRange.json'; // Path for output file
+  const directoryPath = './'; // Directory with all input JSON files
+  const outputFilePath = './raw/allfilesWithinRange.json'; // Path for output file
   const result = processAllFiles(directoryPath);
   writeResultsToFile(outputFilePath, result);
 
@@ -318,7 +318,7 @@ function main() {
   const betweenGroupVarianceResults = performBetweenGroupVarianceAnalysis(processedResults);
 
   // Step 4: Write the between-group variance analysis results to a new file
-  const outputVarianceFilePath = './same_agents/analysis/allSameNewsAcrossRange.json';
+  const outputVarianceFilePath = './raw/allSameNewsAcrossRange.json';
   writeResultsToFile(outputVarianceFilePath, betweenGroupVarianceResults);
 
 }
