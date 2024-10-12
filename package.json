@@ -1,0 +1,11 @@
+{
+  "name": "paperfiles",
+  "version": "1.0.0",
+  "description": "This document explains the key terminologies used in the analysis of misinformation propagation, their significance, and how to interpret high or low values for each metric.",
+  "main": "analysis.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
