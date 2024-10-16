@@ -42,32 +42,32 @@ const saveResultToFile = (result, outputFile) => {
 // Define input ranges and domain files
 //SAME AGENTS
 // const inputData = [
-//     { range: '1-30', domains: ['technology-0'] },
-//     { range: '61-90', domains: ['education-1', 'politics-0','politics-1', 'technology-0'] },
-//     { range: '121-150', domains: ['politics-1'] },
-//     { range: '331-360', domains: ['technology-0'] },
-//     { range: '361-390', domains: ['technology-0'] },
-//     { range: '391-420', domains: ['crime-0'] },
-//     { range: '511-540', domains: ['education-1'] },
-//     { range: '541-570', domains: ['politics-1'] },
-//     { range: '571-600', domains: ['technology-0','politics-0'] },
+    // { range: '1-30', domains: ['technology-0'] },
+    // { range: '61-90', domains: ['education-1', 'politics-0','politics-1', 'technology-0'] },
+    // { range: '121-150', domains: ['politics-1'] },
+    // { range: '331-360', domains: ['technology-0'] },
+    // { range: '361-390', domains: ['technology-0'] },
+    // { range: '391-420', domains: ['crime-0'] },
+    // { range: '511-540', domains: ['education-1'] },
+    // { range: '541-570', domains: ['politics-1'] },
+    // { range: '571-600', domains: ['technology-0','politics-0'] },
 // ] // Input data structure
 
-//9,14,20
-//5,10,16,17,18,19
+//5,9,10,14,16,17,18,19,20
+
+//random controlled
 
 const inputData = [
-    { range: '271-301', domains: ['education-0', 'education-2', 'crime-0'] },
-    { range: '421-451', domains: ['crime-0', 'education-0'] },
-    { range: '601-631', domains: ['technology-0'] },
-    
     { range: '151-181', domains: ['politics-1'] },
+    { range: '271-301', domains: ['education-0', 'education-2', 'crime-0'] },
     { range: '301-331', domains: ['politics-0'] },
+    { range: '421-451', domains: ['crime-0', 'education-0'] },
     { range: '481-511', domains: ['politics-0'] },
     { range: '511-541', domains: ['politics-1'] },
     { range: '541-571', domains: ['politics-1'] },
     { range: '571-601', domains: ['politics-0'] }
-  ]
+    { range: '601-631', domains: ['technology-0'] },
+    ]
    // Input data structure
 
 const outputFile = path.join(__dirname, 'controlled_random_extracted_data_all_ranges.json');
